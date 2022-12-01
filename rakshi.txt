@@ -1,0 +1,84 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+df=pd.read_csv("C:/Users/admin/Downloads/archive/Cars93.csv")
+print(df.head(5))
+print(df)
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+df=pd.read_csv("C:/Users/admin/Downloads/archive/Cars93.csv")
+print(df.head(5))
+print(df)
+print(np.min(df.Price))
+print(np.max(df.Price))
+print(np.mean(df.Price))
+print(np.median(df.Price))
+print(np.std(df.Price))
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+df=pd.read_csv("C:/Users/admin/Downloads/archive/Cars93.csv")
+print(df.head(10))
+print(df)
+mode1=df['MPG.city'].mode()
+print("highest frequency:",mode1)
+fig=plt.title("frequency distribution")
+plt.hist(df['MPG.city'])
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+df=pd.read_csv("C:/Users/admin/Downloads/archive/Cars93.csv")
+print(df)
+fig=plt.figure()
+plt.scatter(df['MPG.city'],df['Horsepower'])
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+df=pd.read_csv("C:/Users/admin/Downloads/archive/Cars93.csv")
+print(df.head(5))
+print(df)
+fig=plt.figure()
+plt.plot(df['EngineSize'],df['Horsepower'])
+
+import pandas as pd
+Series_A=pd.DataFrame([10,20,30,40,50])
+Series_B=pd.DataFrame([40,50,60,70,80])
+common=Series_A.merge(Series_B)
+print(common)
+
+import numpy as np
+Series_A=pd.DataFrame([10,20,30,40,50])
+Series_B=pd.DataFrame([40,50,60,70,80])
+Series_A.min()
+Series_A.max()
+
+import numpy as np
+Series_A=pd.DataFrame([10,20,30,40,50])
+Series_B=pd.DataFrame([40,50,60,70,80])
+Series_B.sum()
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+df=pd.read_csv("C:/Users/admin/Downloads/archive/Cars93.csv")
+print(df.head(5))
+fig=plt.figure()
+plt.xlabel('price')
+plt.title("diffrent cars")
+plt.boxplot(df['Price'])
+
+import numpy as np
+Series_A=pd.DataFrame([10,20,30,40,50])
+Series_B=pd.DataFrame([40,50,60,70,80])
+Series_A.cumprod()
